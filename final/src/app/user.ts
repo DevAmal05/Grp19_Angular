@@ -1,6 +1,6 @@
 export class User {
 
-     cin:string;
+     Cin:string;
     firstname:string;
     lastname:string;
      phone:string;

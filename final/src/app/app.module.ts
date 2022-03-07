@@ -20,6 +20,9 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 import { PeoplelistComponent } from './peoplelist/peoplelist.component';
+import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
+import { AdduserComponent } from './adduser/adduser.component';
+import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
 
 
 @NgModule({
@@ -28,7 +31,10 @@ import { PeoplelistComponent } from './peoplelist/peoplelist.component';
     LoginComponent,
     RegisterComponent,
     ForgetpasswordComponent,
-    PeoplelistComponent
+    PeoplelistComponent,
+    ResetpasswordComponent,
+    AdduserComponent,
+    ConfirmationDialogComponent
   ],
   imports: [
     BrowserModule,
