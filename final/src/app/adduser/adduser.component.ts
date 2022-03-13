@@ -67,7 +67,7 @@ export class AdduserComponent implements OnInit {
             phone: this.phone,
           
               }).then(added =>{
-                this.router.navigate(['/people-list'])
+                this.router.navigate(['/peoplelist'])
               
               
              

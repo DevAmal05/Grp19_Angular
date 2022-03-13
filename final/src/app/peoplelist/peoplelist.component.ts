@@ -69,38 +69,7 @@ userList: AngularFireList<any>
     
   
   }
-
-  onSubmit() {
- 
-    let create = 'false';
-    
-            this.userList.push({
-          
-            Cin: this.Cin ,
-            firstname: this.firstname ,
-            lastname: this.lastname ,
-            phone: this.phone,
-          
-              }).then(added =>{
-                this.router.navigate(['/people-list'])
-              
-             
-        
-    }).catch(error=>{
-      console.error(error)
-      this.errorMessage1= error.messaage
-      console.log('error', error)
-      console.log(error.message)
-    })
-    
-   /*
-    this.condactor = new Conductor(this.lastname,this.firstname,this.phone,this.address);
-   
-    console.log(this.condactor)
-    this.conductorservice.createConductor(this.condactor)
-    */
   
-  }
 
   listUser(entries: any[]){
     this.listuser = [];

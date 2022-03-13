@@ -18,11 +18,12 @@ import {MenubarModule} from 'primeng/menubar';
 import {ToastModule} from 'primeng/toast';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { ForgetpasswordComponent } from './forgetpassword/forgetpassword.component';
 import { PeoplelistComponent } from './peoplelist/peoplelist.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 import { AdduserComponent } from './adduser/adduser.component';
 import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-dialog.component';
+import { UpdateuserComponent } from './updateuser/updateuser.component';
+import {ButtonModule} from 'primeng/button';
 
 
 @NgModule({
@@ -30,11 +31,11 @@ import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    ForgetpasswordComponent,
     PeoplelistComponent,
     ResetpasswordComponent,
     AdduserComponent,
-    ConfirmationDialogComponent
+    ConfirmationDialogComponent,
+    UpdateuserComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +52,8 @@ import { ConfirmationDialogComponent } from './confirmation-dialog/confirmation-
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import firebase from 'firebase/compat/app';
+
+import { MessageService } from 'primeng/api';
+import { AuthService } from './auth.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,7 +10,8 @@ import firebase from 'firebase/compat/app';
 })
 export class AppComponent {
   title = 'final';
-  constructor() {
+  isAuth: boolean;
+  constructor(private authservice:AuthService) {
     var firebaseConfig = {
       apiKey: "AIzaSyDx3idMHuETFY0l1euNs3fjYSouQK0rK04",
       authDomain: "testangular1-44189.firebaseapp.com",
@@ -21,5 +25,20 @@ export class AppComponent {
     
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
+  }
+  ngOnInit(): void {
+    firebase.auth().onAuthStateChanged(
+      (user) => {
+        if (user) {
+          this.isAuth=true;
+        } else {
+          this.isAuth=false;
+        }
+      }
+    );
+  }
+  
+  onSignOut() {
+    this.authservice.SignOutUser();
   }
 }
